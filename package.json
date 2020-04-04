@@ -1,0 +1,22 @@
+{
+  "name": "handy-server",
+  "version": "1.0.0",
+  "description": "A REST API to serve the handy-client project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lelis718/handy-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lelis718/handy-server/issues"
+  },
+  "homepage": "https://github.com/lelis718/handy-server#readme",
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1"
+  }
+}
