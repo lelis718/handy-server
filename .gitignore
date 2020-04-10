@@ -1,0 +1,3 @@
+functions/node_modules/
+functions/service-account-key.json
+#firebase-debug.log
