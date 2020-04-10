@@ -5,7 +5,7 @@ const express = require('express');
 let serviceAccount = require('./service-account-key.json');
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+    credential: admin.credential.cert(serviceAccount)
 });
 
 let db = admin.firestore();
@@ -15,21 +15,30 @@ app.get('/', (req, res) => {
     res.send("Hello from Firebase from express!");
 });
 
-app.get('/cards', (req, res) => {
-    let cards = [];
-    db.collection('cards').get()
+app.get('/help', (req, res) => {
+    let helps = [];
+    db.collection('help').get()
         .then((snapshot) => {
             console.log(snapshot);
             snapshot.forEach((doc) => {
-                cards.push(doc.data());
+                helps.push(doc.data());
             });
 
-            res.send(cards);
+            res.send(helps);
         })
         .catch((err) => {
             console.log('Error getting documents', err);
         });
-    }
+}
 );
+
+app.post('/help', (req, res) => {
+    db.collection('help').doc().set({
+        'user': req.body.user,
+        'message': req.body.message
+    });
+
+    res.status(200).send();
+});
 
 exports.app = functions.https.onRequest(app);
