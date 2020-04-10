@@ -1,28 +1,16 @@
-'use strict';
+const functions = require('firebase-functions');
+const express = require('express');
 
-const Hapi = require('@hapi/hapi');
+const app = express();
 
-const init = async () => {
+app.get('/', (req, res) => {
+    res.send("Hello from Firebase from express!");
+});
 
-    const server = Hapi.server({
-        port: 3000,
-        host: 'localhost'
-    });
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: (request, h) => {
-
-            return 'Hello World!';
-        }
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/cards',
-        handler: (request, h) => {
-            return [{
+app.get('/cards', (req, res) => {
+    res.send([
+            {
                 message: "Welcome to Handy!",
                 icon: "smileBeam", 
                 color: "lightBlueAccent",
@@ -57,21 +45,8 @@ const init = async () => {
                 icon: "smileBeam", 
                 color: "lightBlueAccent"
             },
-        ];
-        }
-    });
+        ]);
+    }
+);
 
-    await server.start();
-    console.log('Server running on %s', server.info.uri);
-};
-
-process.on('unhandledRejection', (err) => {
-
-    console.log(err);
-    process.exit(1);
-});
-
-init();
-
-
-
+exports.app = functions.https.onRequest(app);
