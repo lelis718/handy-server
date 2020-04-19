@@ -1,0 +1,104 @@
+[debug] [2020-04-19T15:54:39.945Z] ----------------------------------------------------------------------
+[debug] [2020-04-19T15:54:39.947Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-04-19T15:54:39.947Z] CLI Version:   8.1.1
+[debug] [2020-04-19T15:54:39.947Z] Platform:      win32
+[debug] [2020-04-19T15:54:39.947Z] Node Version:  v12.0.0
+[debug] [2020-04-19T15:54:39.950Z] Time:          Sun Apr 19 2020 16:54:39 GMT+0100 (Western European Summer Time)
+[debug] [2020-04-19T15:54:39.950Z] ----------------------------------------------------------------------
+[debug] [2020-04-19T15:54:39.950Z] 
+[debug] [2020-04-19T15:54:39.959Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-19T15:54:39.959Z] > authorizing via signed-in user
+[debug] [2020-04-19T15:54:39.960Z] [iam] checking project handy-app-ad6a5 for permissions ["firebase.projects.get"]
+[debug] [2020-04-19T15:54:39.962Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/handy-app-ad6a5:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-19T15:54:40.881Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Apr 2020 15:54:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=776","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-19T15:54:40.882Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/handy-app-ad6a5  
+ 
+[debug] [2020-04-19T15:54:41.141Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Apr 2020 15:54:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\PersonalProjects\Handy\handy-server'...
+[info] 
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\PersonalProjects\Handy\handy-server\functions" for Cloud Functions...
+[debug] [2020-04-19T15:54:43.179Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-19T15:54:43.179Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-04-19T15:54:43.179Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-19T15:54:43.180Z] [worker-~diagnostic~-2ae57609-fcd5-4df7-b501-406621bad448]: Assigning socketPath: \\?\pipe\C:\PersonalProjects\Handy\handy-server\functions\3576 
+[debug] [2020-04-19T15:54:43.180Z] [worker-~diagnostic~-2ae57609-fcd5-4df7-b501-406621bad448]: BUSY 
+[debug] [2020-04-19T15:54:43.594Z] [runtime-status] [3576] Functions runtime initialized. {"cwd":"C:\\PersonalProjects\\Handy\\handy-server\\functions","node_version":"12.0.0"} 
+[debug] [2020-04-19T15:54:43.595Z] [runtime-status] [3576] Disabled runtime features: undefined 
+[debug] [2020-04-19T15:54:43.598Z] [runtime-status] [3576] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-19T15:54:43.600Z] [runtime-status] [3576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-19T15:54:43.601Z] [runtime-status] [3576] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-19T15:54:43.723Z] [runtime-status] [3576] Checked functions.config() {"config":{}} 
+[debug] [2020-04-19T15:54:43.724Z] [runtime-status] [3576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-19T15:54:43.726Z] [runtime-status] [3576] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-19T15:54:43.726Z] [runtime-status] [3576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-19T15:54:43.727Z] [runtime-status] [3576] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[warn] !  Error: Cannot find module './service-account-key.json'
+Require stack:
+- C:\PersonalProjects\Handy\handy-server\functions\index.js
+- C:\Users\andre.lelis\AppData\Roaming\nvm\v12.0.0\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:610:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:526:27)
+    at Module.require (internal/modules/cjs/loader.js:666:19)
+    at require (internal/modules/cjs/helpers.js:16:16)
+    at Object.<anonymous> (C:\PersonalProjects\Handy\handy-server\functions\index.js:5:22)
+    at Module._compile (internal/modules/cjs/loader.js:759:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:770:10)
+    at Module.load (internal/modules/cjs/loader.js:628:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:555:12)
+    at Module.require (internal/modules/cjs/loader.js:666:19)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-19T15:54:44.036Z] [worker-~diagnostic~-2ae57609-fcd5-4df7-b501-406621bad448]: exited 
+[debug] [2020-04-19T15:54:44.036Z] [worker-~diagnostic~-2ae57609-fcd5-4df7-b501-406621bad448]: FINISHED 
+[debug] [2020-04-19T15:59:09.470Z] File C:\PersonalProjects\Handy\handy-server\functions\service-account-key.json changed, reloading triggers 
+[debug] [2020-04-19T15:59:10.471Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0 
+[debug] [2020-04-19T15:59:10.481Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-19T15:59:10.481Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-04-19T15:59:10.481Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-19T15:59:10.481Z] [worker-~diagnostic~-942ac87d-a2e3-4f65-9548-18acb7c86c4d]: Assigning socketPath: \\?\pipe\C:\PersonalProjects\Handy\handy-server\functions\7788 
+[debug] [2020-04-19T15:59:10.481Z] [worker-~diagnostic~-942ac87d-a2e3-4f65-9548-18acb7c86c4d]: BUSY 
+[debug] [2020-04-19T15:59:10.940Z] [runtime-status] [7788] Functions runtime initialized. {"cwd":"C:\\PersonalProjects\\Handy\\handy-server\\functions","node_version":"12.0.0"} 
+[debug] [2020-04-19T15:59:10.941Z] [runtime-status] [7788] Disabled runtime features: undefined 
+[debug] [2020-04-19T15:59:10.944Z] [runtime-status] [7788] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-19T15:59:10.946Z] [runtime-status] [7788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-19T15:59:10.948Z] [runtime-status] [7788] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-19T15:59:10.990Z] [runtime-status] [7788] Checked functions.config() {"config":{}} 
+[debug] [2020-04-19T15:59:10.990Z] [runtime-status] [7788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-19T15:59:10.992Z] [runtime-status] [7788] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-19T15:59:10.992Z] [runtime-status] [7788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-19T15:59:10.992Z] [runtime-status] [7788] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"C:\\PersonalProjects\\Handy\\handy-server\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-19T15:59:11.187Z] [runtime-status] [7788] initializeApp(DEFAULT) {"databaseURL":"https://handy-app-ad6a5.firebaseio.com","storageBucket":"handy-app-ad6a5.appspot.com","projectId":"handy-app-ad6a5","credential":{"implicit":false,"projectId":"handy-app-ad6a5","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDtx6EZVsCb2asF\nBhMQPQHcajRiRQhhVpOVAj/1/+SJhS3tn45R+Q4vluj/+52cGL/UxeU8PnepFO5S\nfzTqeJSauwgHHwnm1j/4NiCIHZ24gfqLoLSpoHxG1+xBEWd0F8vD2sw+5C3sPUeN\nODfJxglc2WXYMrdzVYdOlz/tBYRleY6qP20LtYNMRMjvIIi35Hx21qmvFBk1PGr5\nQBkxBwDuEmvWA9OuK+K+jnRC2niX4AQCidP9bhIlCnwgCF6mY0CeP5MOb4ZIcBXX\nxegSHC+FEVCaRUENJyQ+B/3v2IHkgLtTvS8Xcm5XxXqM2ZfKD5aDy1Gz7/yB0iDZ\nFnLpADJNAgMBAAECggEALtvaul7fjccfXhnUm2xeZ8TRRnVywZX5dxHOr4jKjbRe\nePfq6OojOssrZzj7ljXFZiXKt2zbEYnjroPNlpCFPpnxqs+Z2LErwZtPHWvyt1f8\nG1SkDdKn8yEduLP4locS+6msew9mImpwJZso2V1q3m6kVK8n+nVmOR1y9l+SOBnT\nfLURYpFd0wwKI8fWr7FlYHoZurmVowBTesDGMi9n1IyyfFORHThPJVm6vsF6+oBm\nWep3gGy5DxPSdWhDXdYYzFE+gS8R3y9mQPBqHEI4bMvrgdUbiBEH3NoI9VpJGlka\nAtT/yOBpesK48NAt2Kt2cd0RHfT+pu/2YkunOWMdKQKBgQD5xEZQ16S2kvWIBJC8\n3TS2CF+G51740MjbYfgeodzhLC3SvBKmNKg6KkZmXS2ysUrkvJJUZg7Fngg8N2Sh\nfa5Gsn1ZSGkWFvnRtse0A9u42L9ZNHgzKqoq6qyPm343qOyRbLdH2tEtBh0PsLPO\nt1Dinak5NdX6aFRqLKpHCFEgiQKBgQDztsWgess0GEg87kTNXXFSMM+a6/6ZB4su\n/8KnuxeNDJrOh6Dhvab+OE1YQMKgaJ044GAJ7Yq6bUXcM7B+W4Pj+amj/ltA45e5\n4H2KcwcfBuXRrqSRBoR82UdELmZIapnt+S3rrefyT9hcmP/yq/RK/K9VmNBYIuJb\nIKzRpPHqpQKBgQDtPGHxnbJE/Hec94Em8xGDKZbaw19xBJcT0g1jwyjS9CyeMqeg\nGPoFLWxrBGxIg5/4faib48h6Ki32TEMYJRFo81aefGncYnxtlqg/Mz77Z1zw9SaK\nqyaw1vCLAw2y/o+dXd8EsDHpCxqFcbiIS5TXextmTN1vGLO9makvCRZNyQKBgQDn\noMtdhbdBcN6fQlmT0X6VfhyiAi98o+XNqnkHz1JH1TYAmnj2c7iWH06rVQllSWg8\nGUxNwz05iAeAjIPu4+2LK8rmOSXjmyumFs1aW47mFzkvu0tfJpGe0ybfjzXZF6/q\ntAvH1gX/j5F0GFoR+wn4hwXhVZaWXblCoOB/c8QUnQKBgCsbqOc5A82NT2zvvEb/\ndsZyoc3qgvdbQWn6TtNUmhLkfuvVFMP+reN8RMiWxPLBsaI1AFd57KcsX8RXNMGs\nsWZE+g3Dackph0+sz+eW3hUX3B7Rcj42lFIS34k8lBjnXbuGbcyiFXMB2j+UbGPJ\nHoFGSx6x5U4HStUe1IglcoS1\n-----END PRIVATE KEY-----\n","clientEmail":"handy-app-ad6a5@appspot.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5000/handy-app-ad6a5/us-central1/app).
+[debug] [2020-04-19T15:59:12.005Z] [worker-~diagnostic~-942ac87d-a2e3-4f65-9548-18acb7c86c4d]: IDLE 
+[debug] [2020-04-19T15:59:18.512Z] ----------------------------------------------------------------------
+[debug] [2020-04-19T15:59:18.514Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-04-19T15:59:18.514Z] CLI Version:   8.1.1
+[debug] [2020-04-19T15:59:18.514Z] Platform:      win32
+[debug] [2020-04-19T15:59:18.514Z] Node Version:  v12.0.0
+[debug] [2020-04-19T15:59:18.516Z] Time:          Sun Apr 19 2020 16:59:18 GMT+0100 (Western European Summer Time)
+[debug] [2020-04-19T15:59:18.516Z] ----------------------------------------------------------------------
+[debug] [2020-04-19T15:59:18.516Z] 
+[debug] [2020-04-19T15:59:18.525Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-19T15:59:18.526Z] > authorizing via signed-in user
+[debug] [2020-04-19T15:59:18.526Z] [iam] checking project handy-app-ad6a5 for permissions ["firebase.projects.get"]
+[debug] [2020-04-19T15:59:18.529Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/handy-app-ad6a5:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-19T15:59:19.461Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Apr 2020 15:59:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=785","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-19T15:59:19.462Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/handy-app-ad6a5  
+ 
+[debug] [2020-04-19T15:59:19.756Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Apr 2020 15:59:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\PersonalProjects\Handy\handy-server'...
+[info] 
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\PersonalProjects\Handy\handy-server\functions" for Cloud Functions...
+[debug] [2020-04-19T15:59:21.806Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-19T15:59:21.806Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-04-19T15:59:21.806Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-19T15:59:21.807Z] [worker-~diagnostic~-bccf69cf-8bf1-4f40-b867-1751de1dc1f3]: Assigning socketPath: \\?\pipe\C:\PersonalProjects\Handy\handy-server\functions\19420 
+[debug] [2020-04-19T15:59:21.807Z] [worker-~diagnostic~-bccf69cf-8bf1-4f40-b867-1751de1dc1f3]: BUSY 

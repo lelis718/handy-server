@@ -32,6 +32,7 @@ app.get('/help', (req, res) => {
 }
 );
 
+
 app.post('/help', (req, res) => {
     db.collection('help').doc().set({
         'user': req.body.user,
@@ -40,5 +41,25 @@ app.post('/help', (req, res) => {
 
     res.status(200).send();
 });
+
+app.get('/helpFrom/:userId', (req, res) => {
+ 
+    var userId = req.params.userId;
+
+    let helps = [];
+    db.collection('help').where("user", "==", userId).get()
+        .then((snapshot) => {
+            console.log(snapshot);
+            snapshot.forEach((doc) => {
+                helps.push(doc.data());
+            });
+
+            res.send(helps);
+        })
+        .catch((err) => {
+            console.log('Error getting documents', err);
+        });
+}
+);
 
 exports.app = functions.https.onRequest(app);
