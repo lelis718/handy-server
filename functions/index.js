@@ -15,12 +15,13 @@ app.get('/', (req, res) => {
     res.send("Hello from Firebase from express!");
 });
 
-app.get('/help', (req, res) => {
+app.get('/help/others/:userId', (req, res) => {
+    var userId = req.params.userId;
+
     let helps = [];
     db.collection('help').get()
         .then((snapshot) => {
-            console.log(snapshot);
-            snapshot.forEach((doc) => {
+            snapshot.docs.filter((doc) => doc.data().user != userId).forEach((doc) => {
                 helps.push(doc.data());
             });
 
@@ -29,21 +30,10 @@ app.get('/help', (req, res) => {
         .catch((err) => {
             console.log('Error getting documents', err);
         });
-}
-);
-
-
-app.post('/help', (req, res) => {
-    db.collection('help').doc().set({
-        'user': req.body.user,
-        'message': req.body.message
-    });
-
-    res.status(200).send();
 });
 
-app.get('/helpFrom/:userId', (req, res) => {
- 
+app.get('/help/my/:userId', (req, res) => {
+
     var userId = req.params.userId;
 
     let helps = [];
@@ -59,7 +49,16 @@ app.get('/helpFrom/:userId', (req, res) => {
         .catch((err) => {
             console.log('Error getting documents', err);
         });
-}
-);
+});
+
+app.post('/help', (req, res) => {
+    db.collection('help').doc().set({
+        'id': req.body.id,
+        'user': req.body.user,
+        'message': req.body.message
+    });
+
+    res.status(200).send();
+});
 
 exports.app = functions.https.onRequest(app);
