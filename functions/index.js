@@ -15,9 +15,29 @@ app.get('/', (req, res) => {
     res.send("Hello from Firebase from express!");
 });
 
-app.get('/help', (req, res) => {
+app.get('/help/others/:userId', (req, res) => {
+    var userId = req.params.userId;
+
     let helps = [];
     db.collection('help').get()
+        .then((snapshot) => {
+            snapshot.docs.filter((doc) => doc.data().user != userId).forEach((doc) => {
+                helps.push(doc.data());
+            });
+
+            res.send(helps);
+        })
+        .catch((err) => {
+            console.log('Error getting documents', err);
+        });
+});
+
+app.get('/help/my/:userId', (req, res) => {
+
+    var userId = req.params.userId;
+
+    let helps = [];
+    db.collection('help').where("user", "==", userId).get()
         .then((snapshot) => {
             console.log(snapshot);
             snapshot.forEach((doc) => {
@@ -29,11 +49,11 @@ app.get('/help', (req, res) => {
         .catch((err) => {
             console.log('Error getting documents', err);
         });
-}
-);
+});
 
 app.post('/help', (req, res) => {
     db.collection('help').doc().set({
+        'id': req.body.id,
         'user': req.body.user,
         'message': req.body.message
     });
